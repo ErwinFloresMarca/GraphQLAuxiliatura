@@ -20,7 +20,7 @@ type Query{
     loginUser(user: String! password: String!): User
 }
 
-input CourseInput{
+input UserInput{
     user: String!
     password: String!
     password_confirm: String!
@@ -37,7 +37,7 @@ input PersonaInput{
 
 type Mutation{
     "Crea un usuario"
-    createUser(input: CourseInput!): User
+    createUser(input: UserInput!): User
     "Crear una persona"
     createPersona(input: PersonaInput!): Persona
 }

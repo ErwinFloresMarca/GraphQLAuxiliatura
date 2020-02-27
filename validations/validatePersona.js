@@ -1,4 +1,5 @@
 module.exports=(data)=>{
+    
     var nombres_reg = /\w{3,}/g
     var apellidos_reg = /\w{3,}/g
     var email_reg = /\w{1,}@[\w.]{1,}[.][a-z]{2,3}/g
@@ -15,7 +16,7 @@ module.exports=(data)=>{
         throw "el ci no es adecuado"
     if(data.direccion==undefined)
         data.direccion=""
-    if(data.direccion==undefined)
+    if(data.fechaNac==undefined)
         data.fechaNac=null
     return data
 }

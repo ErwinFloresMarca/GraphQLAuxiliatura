@@ -1,0 +1,43 @@
+type Persona{
+    _id: ID!
+    nombres: String!
+    apellidos: String!
+    ci: String!
+    direccion: String
+    email: String!
+    fechaNac: String
+}
+type User{
+    _id: ID!
+    user: String!
+    password: String!
+}
+
+type Query{
+    "Devuelve todas las personas"
+    getPersonas: [Persona]
+    "Devuelve la autenticacion del usuario"
+    loginUser(user: String! password: String!): User
+}
+
+input CourseInput{
+    user: String!
+    password: String!
+    password_confirm: String!
+}
+
+input PersonaInput{
+    nombres: String!
+    apellidos: String!
+    ci: String!
+    direccion: String
+    email: String!
+    fechaNac: String
+}
+
+type Mutation{
+    "Crea un usuario"
+    createUser(input: CourseInput!): User
+    "Crear una persona"
+    createPersona(input: PersonaInput!): Persona
+}
